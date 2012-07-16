@@ -1,9 +1,12 @@
 package roamer
 
+import roamer.Airline;
+
 class Trip {
 
     static constraints = {
     }
+	static belongsTo = [airline: Airline]
 	
 	String nameOfPlace
 	String city
@@ -11,4 +14,8 @@ class Trip {
 	Date endDate
 	String tripDescription
 	String tripNotes
+	
+	Airline airline
+	
+	
 }
